@@ -1,11 +1,12 @@
 import reflex as rx
 import pytest
-from who__is_who.diccionario_caracteristicas import diccionario 
+from diccionario_caracteristicas import diccionario
 import random
 
 
-def randomizer(personas):
+def randomizer(diccionario):
 
-    return random.choice(list(personas.keys()))
+    return random.choice(list(diccionario.keys()))
 
-
+info_perso=diccionario()
+print(randomizer(info_perso))
