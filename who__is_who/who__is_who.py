@@ -6,35 +6,42 @@ from rxconfig import config
 
 
 class ChatState(rx.State):
-    text: str = ""
+    form_data: dict = {}
 
     @rx.event
-    def update_text(self, new_text:str):
-        self.text = new_text
+    def update_text(self, form_data: dict):
+        self.form_data = form_data
+        
 
 
-def chat() -> rx.Component:
-    return rx.container(
-        rx.hstack(
+def chat():
+    return rx.vstack(
+        rx.form(
+            rx.hstack(
 
-            rx.input(default_value=ChatState.text, 
-                placeholder = "Haz una pregunta sobre tu personaje en mente",   
-                on_change=ChatState.update_text,
-                style = style.chat_style,
+                rx.input(
+                    placeholder = "Haz una pregunta sobre tu personaje en mente",   
+                    style = style.chat_style,
                 ),
 
-            rx.button("Enviar", 
-                on_click=lambda: ChatState.update_text(ChatState.text),
-                style = style.button_style,
+                rx.button(
+                    "Enviar", 
+                    type="submit",
+                    style = style.button_style,
                 ),
-        ),margin_top = "80%",
+        ),
+        on_submit=ChatState.update_text,
+        reset_on_submit=True,
+        margin_top = "80%",
+    ),
     )
-
+    
 def index():
     return rx.container(
-    rx.heading("Bienvenido al Who is Who",font_size = "10px" , as_ = "h1"),
-    chat(),
-    )
+        rx.heading("Bienvenido al Who is Who",font_size = "10px" , as_ = "h1"),
+        chat(),
+),
+
 
 app = rx.App()
 app.add_page(index)
