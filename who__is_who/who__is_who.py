@@ -1,5 +1,5 @@
 import reflex as rx
-
+from who__is_who.estado import State
 def index():
     return rx.box(rx.heading("Bienvenido al Who is Who",font_size="9px" , as_="h1"),
     rx.box(
@@ -36,8 +36,8 @@ def index():
                     spacing="6",
                     width="65%",
                     margin_left="300px",
-                    margin_top="5px",                                                                                                                                                                                                                                    
-                    on_click=elegir.randomizer,
+                    margin_top="5px",
+                    on_click=State.randomizer,
             ),
     ),
     ),

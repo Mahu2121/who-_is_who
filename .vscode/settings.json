@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "Pagina reflex",
         "Actualizar tablero",
-        "diccionario"
+        "diccionario",
+        "imagenes"
     ]
 }
