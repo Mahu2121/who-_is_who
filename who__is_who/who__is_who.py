@@ -10,8 +10,9 @@ class ChatState(rx.State):
 
     @rx.event
     def update_text(self, form_data: dict):
+        print(form_data)
         self.form_data = form_data
-        
+
 
 
 def chat():
@@ -20,6 +21,7 @@ def chat():
             rx.hstack(
 
                 rx.input(
+                    name="question",
                     placeholder = "Haz una pregunta sobre tu personaje en mente",   
                     style = style.chat_style,
                 ),
