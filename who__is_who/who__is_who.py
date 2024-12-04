@@ -26,7 +26,7 @@ def chat():
 
                 rx.input(
                     name="question",
-                    placeholder = "Haz una pregunta sobre tu personaje en mente",   
+                    placeholder = "Introduce la característica a buscar",   
                     style = style.chat_style,
                 ),
 

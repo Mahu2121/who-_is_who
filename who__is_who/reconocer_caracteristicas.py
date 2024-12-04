@@ -1,15 +1,22 @@
-from who__is_who import ChatState
+from .who__is_who import ChatState
 
 from diccionario_caracteristicas import diccionario
 
 
+encontrados = []
+no_encontrados = []
 
-def reconocer_caracteristicas():
+def depurar_personajes():
+    for personaje, caracteristicas in diccionario.items():
 
-    imput_chat = ChatState.get_form_data()
-    for caracteristica in diccionario:
+        if form_data in caracteristicas:
+            encontrados.append(personaje)
+    
+        else:
+            no_encontrados.append(personaje)
 
-        try caracteristica.index(caracteristica):
+print(encontrados)
 
+print(no_encontrados)
 
         
