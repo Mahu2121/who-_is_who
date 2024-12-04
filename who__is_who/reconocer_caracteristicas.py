@@ -1,22 +1,31 @@
-from .who__is_who import ChatState
+import reflex as rx
+
+from .estado import ChatState
 
 from diccionario_caracteristicas import diccionario
 
 
-encontrados = []
-no_encontrados = []
+
+
 
 def depurar_personajes():
+
+    caracteristica_buscada = ChatState.get_form_data()
+
+    encontrados = []
+    no_encontrados = []
+
     for personaje, caracteristicas in diccionario.items():
 
-        if form_data in caracteristicas:
+        if caracteristica_buscada in caracteristicas:
             encontrados.append(personaje)
     
         else:
             no_encontrados.append(personaje)
+        
+    print(encontrados)
 
-print(encontrados)
-
-print(no_encontrados)
+    print(no_encontrados)
+    
 
         
