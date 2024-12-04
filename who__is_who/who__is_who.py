@@ -4,20 +4,7 @@ from who__is_who import style
 
 from rxconfig import config
 
-
-class ChatState(rx.State):
-    form_data: dict = {}
-
-    @rx.event
-    def update_text(self, form_data: dict):
-        print(form_data)
-        self.form_data = form_data
-    
-    @classmethod
-    def get_form_data(cls):
-        return cls.form_data
-
-
+from .estado import ChatState
 
 def chat():
     return rx.vstack(
