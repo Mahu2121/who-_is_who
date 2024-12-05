@@ -6,7 +6,7 @@ from rxconfig import config
 
 from .estado import ChatState
 
-from .reconocer_caracteristicas import depurar_personajes 
+
 
 def chat():
     return rx.vstack(
@@ -36,7 +36,9 @@ def handle_form_submit(form_data):
 
     ChatState.update_text(form_data)
     
-    depurar_personajes()
+    ChatState.depurar_personajes()
+
+    return rx.window_alert("Formulario enviado con éxito.")
     
 def index():
     return rx.container(

@@ -5,7 +5,7 @@ from .estado import ChatState
 from .diccionario_caracteristicas import diccionario
 
 datos = diccionario()
-caracteristica_buscada = ChatState.get_form_data()
+caracteristica_buscada = ChatState.imput.form_data
 def depurar_personajes() :
 
     encontrados = []
