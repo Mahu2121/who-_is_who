@@ -1,13 +1,12 @@
 import reflex as rx
-import pytest
 
-from who__is_who.randomizer import randomizer
+from who__is_who.diccionario_caracteristicas import diccionario
 import random
+from who__is_who.randomizer import randomizer
 
-
-class State(rx.State):
-    
-
+class state(rx.State):
+    personaje: str=randomizer
 
     def randomizer(self):
-        print("hola")
+        info_perso=diccionario()
+        random.choice(list(info_perso.keys()))
