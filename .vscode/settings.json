@@ -1,5 +1,9 @@
 {
     "conventionalCommits.scopes": [
-        "Pagina reflex"
+        "Pagina reflex",
+        "Actualizar tablero",
+        "diccionario",
+        "imagenes",
+        "HistoriaUsuario1"
     ]
 }
