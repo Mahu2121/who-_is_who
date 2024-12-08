@@ -6,7 +6,7 @@ from rxconfig import config
 
 from .estado import ChatState
 
-
+from .diccionario_caracteristicas import diccionario
 
 def chat():
     return rx.vstack(
@@ -26,25 +26,49 @@ def chat():
                     
                 ),
         ),
-        on_submit= handle_form_submit, 
+        on_submit= ChatState.handle_submit, 
         reset_on_submit=True,
         margin_top = "80%",
     ),
     )
 
-def handle_form_submit(form_data):
+        
+class ChatState(rx.State):
+    form_data: dict = {}
+    datos: dict = diccionario()
 
-    ChatState.update_text(form_data)
+    def handle_submit(self,form_data: dict):
+        self.update_text(form_data)
+        self.depurar_personajes(form_data.get("question"))
+
+
+    @rx.event
+    def update_text(self, form_data: dict):
+        print(form_data)
+        self.form_data = form_data
+
+    @rx.event
+    def depurar_personajes(self,caracteristica: str):
+
+        diccionario_nuevo = {}
+
+        for personaje, caracteristicas in self.datos.items():
+
+            if  caracteristica in caracteristicas:
+                diccionario_nuevo.update({personaje:caracteristicas})
+
+        self.datos = diccionario_nuevo
+
     
-    ChatState.depurar_personajes()
+        print(self.datos)
 
-    return rx.window_alert("Formulario enviado con éxito.")
     
 def index():
     return rx.container(
         rx.heading("Bienvenido al Who is Who",font_size = "10px" , as_ = "h1"),
         chat(),
 ),
+
 
 
 app = rx.App()
