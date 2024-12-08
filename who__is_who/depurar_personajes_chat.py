@@ -3,7 +3,7 @@ import reflex as rx
 from who__is_who import style
 
 from rxconfig import config
-
+from .estado import state 
 
 from .diccionario_caracteristicas2 import diccionario
 
@@ -40,7 +40,11 @@ class ChatState(rx.State):
         self.update_text(form_data)
         self.depurar_personajes(form_data.get("question"))
 
+    @rx.var
+    def keys(self) -> list:
+        return list(self.datos.keys())
 
+    
     @rx.event
     def update_text(self, form_data: dict):
         print(form_data)
@@ -50,6 +54,14 @@ class ChatState(rx.State):
     def depurar_personajes(self,caracteristica: str):
 
         diccionario_nuevo = {}
+        # caracteristicas_personaje != self.datos.get(state.final)
+
+        # print(caracteristicas_personaje)
+        # if caracteristica not in caracteristicas_personaje:
+
+        #     print("El personaje no tiene esta caracteristica")
+
+        #     return
 
         for personaje, caracteristicas in self.datos.items():
 

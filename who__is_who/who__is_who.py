@@ -2,6 +2,9 @@ import reflex as rx
 from who__is_who.estado import state
 from .diccionario_caracteristicas2 import diccionario
 
+from who__is_who import style
+
+
 
 def index():
     return rx.box(rx.heading("Bienvenido al Who is Who",font_size="60px" , margin_top="20px",as_="h1",text_align="center"),
@@ -15,7 +18,7 @@ def index():
                 ),
                 height="24vh",
                 width="115px",
-                background_color="tomato",
+                background_color= rx.cond(state.keys.contains(nombre) ,"tomato","blue"),
                 
             )
             for nombre in diccionario().keys()
@@ -29,7 +32,7 @@ def index():
     )
 ),
 
-                rx.button("Empezar",padding="10px",position="absolute",top="800px",background_color="tomato",on_click=[state.ponerImagenes,state.randomizer]),
+                rx.button("Empezar",padding="10px",position="absolute",top="800px",background_color="tomato",on_click=[state.randomizer, state.ponerImagenes]),
                 
                 rx.cond(state.empezar,
                         rx.fragment(
@@ -46,7 +49,32 @@ def index():
 
 
 
-                ),),
+                ),
+    rx.vstack(
+        rx.form(
+            rx.hstack(
+
+                rx.input(
+                    name="question",
+                    placeholder = "Introduce la característica a buscar",   
+                    style = style.chat_style,
+                ),
+
+                rx.button(
+                    "Enviar", 
+                    type="submit",
+                    style = style.button_style,
+                    
+                ),
+        ),
+        on_submit= state.handle_submit, 
+        reset_on_submit=True,
+        
+    ),
+    ),
+)
+
+
 
 app = rx.App()
 app.add_page(index)

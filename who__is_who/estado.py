@@ -11,6 +11,8 @@ from who__is_who.randomizer import randomizer
 
 class state(rx.State):
     name_diccionarioo= diccionario()
+    form_data: dict = {}
+    datos: dict = diccionario()
 
     personaje: str = ""
     final: str = ""
@@ -34,3 +36,40 @@ class state(rx.State):
         else:
             self.adivinaste = f"Perdiste. El personaje era {self.final}."
             
+
+    def handle_submit(self,form_data: dict):
+        self.update_text(form_data)
+        self.depurar_personajes(form_data.get("question"))
+
+    @rx.var
+    def keys(self) -> list:
+        return list(self.datos.keys())
+
+    
+    @rx.event
+    def update_text(self, form_data: dict):
+        print(form_data)
+        self.form_data = form_data
+
+    @rx.event
+    def depurar_personajes(self,caracteristica: str):
+
+        diccionario_nuevo = {}
+        caracteristicas_personaje = self.datos.get(self.final)
+
+        print(caracteristicas_personaje)
+        if caracteristica not in caracteristicas_personaje:
+
+            print("El personaje no tiene esta caracteristica")
+
+            return
+
+        for personaje, caracteristicas in self.datos.items():
+
+            if  caracteristica in caracteristicas:
+                diccionario_nuevo.update({personaje:caracteristicas})
+
+        self.datos = diccionario_nuevo
+
+    
+        print(self.datos)
