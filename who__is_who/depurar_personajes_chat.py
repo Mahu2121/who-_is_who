@@ -4,7 +4,6 @@ from who__is_who import style
 
 from rxconfig import config
 
-from .estado import ChatState
 
 from .diccionario_caracteristicas import diccionario
 
