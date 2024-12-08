@@ -1,5 +1,5 @@
 import reflex as rx
 
 config = rx.Config(
-    app_name="who__is_who",
+    app_name="depurar_personajes_chat",
 )
