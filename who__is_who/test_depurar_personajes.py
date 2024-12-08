@@ -1,4 +1,4 @@
-from diccionario_caracteristicas import diccionario
+from diccionario_caracteristicas2 import diccionario
 
 def depurar_personajes(self) :
 

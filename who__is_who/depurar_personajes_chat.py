@@ -5,7 +5,7 @@ from who__is_who import style
 from rxconfig import config
 
 
-from .diccionario_caracteristicas import diccionario
+from .diccionario_caracteristicas2 import diccionario
 
 def chat():
     return rx.vstack(
