@@ -9,3 +9,7 @@
 * Python3
 * pip3
 * reflex
+
+## Historias de usuario
+
+## Tiempo dedicado
