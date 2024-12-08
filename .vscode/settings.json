@@ -1,5 +1,9 @@
 {
     "conventionalCommits.scopes": [
-        "Actualizar README"
+        "Pagina reflex",
+        "Actualizar tablero",
+        "diccionario",
+        "imagenes",
+        "HistoriaUsuario1"
     ]
 }
