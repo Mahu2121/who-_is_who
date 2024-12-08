@@ -45,18 +45,22 @@ def index():
 
                 rx.button("Empezar",padding="10px",position="absolute",top="800px",background_color="tomato",on_click=[state.ponerImagenes,state.randomizer]),
                 
-            
-            
-                rx.input(on_change=state.set_texto_input,name="adivinarPersonaje", placeholder = "Adivina el personaje aqui", width="550px",margin_left="60%",border_width="3px",margin_top="30px")
+                rx.cond(state.empezar,
+                        rx.fragment(
+                
+                rx.input(on_change=state.set_texto_input,placeholder = "Adivina el personaje aqui", width="550px",margin_left="60%",border_width="3px",margin_top="30px",)
                 ,rx.button(
                     "Adivinar",
                     on_click=state.adivinar,
+                    position="absolute",
+                    left="1700px",
+                    top="820px",
                 ),
-                rx.text(state.adivinaste),
+                    rx.text(state.adivinaste),    ),
 
 
 
-    ),)
+                ),),)
 
 app = rx.App()
 app.add_page(index)
