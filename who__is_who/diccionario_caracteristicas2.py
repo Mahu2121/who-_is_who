@@ -20,7 +20,7 @@ def diccionario():
             "Paul":["hombre","blanco","corto","gafas"] ,
             "Maria":["mujer","castaño","largo","boina","pendientes"], 
             "Frans":["hombre","pelirrojo","corto"], 
-            "Herman": ["hombre", "pelirrojo", "semicalvo"], 
+            "Hernan": ["hombre", "pelirrojo", "semicalvo"], 
             "Bernard":["hombre","castaño","corto","gorro"],
             "Philip":["hombre","castaño","corto","barba"],
             "Eric":["hombre","rubio","corto","gorra"], 
