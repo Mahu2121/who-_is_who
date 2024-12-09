@@ -1,49 +1,38 @@
 import reflex as rx
 from who__is_who.estado import state
+from .diccionario_caracteristicas2 import diccionario
+
+from who__is_who import style
+
 
 
 def index():
     return rx.box(rx.heading("Bienvenido al Who is Who",font_size="60px" , margin_top="20px",as_="h1",text_align="center"),
     rx.box(
-            rx.grid(
+    rx.grid(
+        *[
+            rx.card(
+                rx.cond(
+                    state.empezar,
+                    rx.image(src=f"/{nombre.lower()}.png")  
+                ),
+                height="24vh",
+                width="115px",
+                background_color= rx.cond(state.keys.contains(nombre) ,"tomato","blue"),
                 
-                
-                rx.card(rx.cond(state.empezar,rx.image(src="/alex.png")),height="24vh",width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/alfred.png")),height="24vh", width="115px",background_color="tomato" ),
-                rx.card(rx.cond(state.empezar,rx.image(src="/anita.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/anne.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/bernard.png")),height="24vh", width="115px",background_color="tomato" ),
-                rx.card(rx.cond(state.empezar,rx.image(src="/bill.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/charles.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/claire.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/david.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/eric.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/frans.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/george.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/hernan.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/joe.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/maria.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/max.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/paul.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/peter.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/philip.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/richard.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/robert.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/sam.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/susan.png")),height="24vh", width="115px" ,background_color="tomato"),
-                rx.card(rx.cond(state.empezar,rx.image(src="/tom.png")),height="24vh", width="115px",background_color="tomato" ),
+            )
+            for nombre in diccionario().keys()
+        ], 
+        columns="8",
+        spacing="6",
+        width="65%",
+        margin_left="300px",
+        margin_top="40px",
                     
-                    
-                    columns="8",
-                    spacing="6",
-                    width="65%",
-                    margin_left="300px",
-                    margin_top="40px",
-                    
-                    
-            ),
+    )
+),
 
-                rx.button("Empezar",padding="10px",position="absolute",top="800px",background_color="tomato",on_click=[state.ponerImagenes,state.randomizer]),
+                rx.button("Empezar",padding="10px",position="absolute",top="800px",background_color="tomato",on_click=[state.randomizer, state.ponerImagenes]),
                 
                 rx.cond(state.empezar,
                         rx.fragment(
@@ -60,7 +49,32 @@ def index():
 
 
 
-                ),),)
+                ),
+    rx.vstack(
+        rx.form(
+            rx.hstack(
+
+                rx.input(
+                    name="question",
+                    placeholder = "Introduce la característica a buscar",   
+                    style = style.chat_style,
+                ),
+
+                rx.button(
+                    "Enviar", 
+                    type="submit",
+                    style = style.button_style,
+                    
+                ),
+        ),
+        on_submit= state.handle_submit, 
+        reset_on_submit=True,
+        
+    ),
+    ),
+)
+
+
 
 app = rx.App()
 app.add_page(index)
