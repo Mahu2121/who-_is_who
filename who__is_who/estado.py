@@ -13,7 +13,7 @@ class state(rx.State):
     name_diccionarioo= diccionario()
     form_data: dict = {}
     datos: dict = diccionario()
-
+    personas_eliminadas:list = []
     personaje: str = ""
     final: str = ""
     adivinaste: str = ""
@@ -60,8 +60,15 @@ class state(rx.State):
         print(caracteristicas_personaje)
         if caracteristica not in caracteristicas_personaje:
 
-            print("El personaje no tiene esta caracteristica")
+            self.personas_eliminadas = []
+            for personas in self.datos:
+                if caracteristica in self.datos[personas]:
+                    self.personas_eliminadas.append(personas)
 
+            for personas in self.personas_eliminadas:
+                del self.datos[personas]
+
+                
             return
 
         for personaje, caracteristicas in self.datos.items():
