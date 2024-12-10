@@ -45,33 +45,29 @@ def index():
                     left="1700px",
                     top="820px",
                 ),
-                    rx.text(state.adivinaste),    ),
-
-
-
-                ),
-    rx.vstack(
+                    rx.text(state.adivinaste),
+                    rx.vstack(
         rx.form(
             rx.hstack(
 
                 rx.input(
                     name="question",
-                    placeholder = "Introduce la característica a buscar",   
+                    placeholder = "Introduce la característica a buscar",
                     style = style.chat_style,
                 ),
 
-                rx.button(
-                    "Enviar", 
-                    type="submit",
-                    style = style.button_style,
-                    
-                ),
+                
         ),
-        on_submit= state.handle_submit, 
+        on_submit= state.handle_submit,
         reset_on_submit=True,
         
     ),
-    ),
+    ),),
+                    
+
+
+                ),
+    
 )
 
 
