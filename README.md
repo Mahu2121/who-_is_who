@@ -68,8 +68,28 @@ Creado intentando seguir el modelo de vista controlador
 
 # Descripción técnica
 
+La aplicación se basa en una arquitectura <u>modular</u>:
+
+<strong>Backend</strong>: Proporciona la lógica para el filtrado y selección de personajes.
+
+<strong>Frontend</strong>: Maneja la interacción del usuario y muestra los resultados.
+
 
 ## Requisitos funcionales/no funcionales, NOT LIST
+
+#### Requisitos funcionales: 
+* Permitir al usuario realizar preguntas sobre las características de los personajes.
+
+* Filtrar personajes en base a las respuestas.
+
+* Permitir adivinar el personaje seleccionado.
+
+
+#### Requisitos no funcionales:
+
+* Interfaz intuitiva y fácil de usar.
+
+* Código modular para facilitar mantenibilidad.
 
 ## Historias de usuaria
 
@@ -105,4 +125,12 @@ Creado intentando seguir el modelo de vista controlador
 
 ## Posibles mejoras
 
+Agregar más características a los personajes para aumentar la complejidad.
+
+Implementar un sistema de puntuación.
+
+Optimizar la interfaz 
+
 ## Dificultades
+
+Es la primera vez que usamos un framework, en este caso "Reflex" lo que hizo que tuvieramos que aprender desde el principio como funciona y como integrar el backend al la interfaz. Tambien era la primera vez que veiamos las clases de estado que al final resultaron ser vitales para, por ejemplo ir cambiando el imput introducido por el usuario y guardarlo para comparar.
