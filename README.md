@@ -3,45 +3,52 @@
 # Tabla de contenidos
 
 
-* [Introducción](#introducción)
-* [Manual](#manual)
-  * [Pre-requisitos](#pre-requisitos)
-  * [Instalación](#instalación)
-  * [Uso](#uso)
-* [Metodología](#metodología)
-* [Descripción técnica](#descripción-técnica)
-  * [Requisitos funcionales/no funcionales, NOT LIST](#requisitos-funcionalesno-funcionales-not-list)
-  * [Historias de usuaria](#historias-de-usuaria)
-  * [Arquitectura de la aplicación](#arquitectura-de-la-aplicación)
-* [Diseño](#diseño)
-  * [Diagrama de Componentes](#diagrama-de-componentes)
-* [Implementación](#implementación)
-  * [Tecnologías y Herramientas utilizadas](#tecnologías-y-herramientas-utilizadas)
-  * [Backend](#backend)
-  * [Frontend](#frontend)
-* [Pruebas](#pruebas)
-  * [Coverage](#coverage)
-  * [Test de unidad](#test-de-unidad)
-  * [Test de integración](#test-de-integración)
-* [Análisis del tiempo invertido](#análisis-del-tiempo-invertido)
-  * [Clockify + Wakatime](#clockify--wakatime)
-  * [Justificación temporal](#justificación-temporal)
-* [Conclusiones](#conclusiones)
-  * [Posibles mejoras](#posibles-mejoras)
-  * [Dificultades](#dificultades)
+
+- [Who\_is\_Who](#who_is_who)
+- [Tabla de contenidos](#tabla-de-contenidos)
+- [Introducción](#introducción)
+- [Manual](#manual)
+  - [Pre-requisitos](#pre-requisitos)
+  - [Instalación](#instalación)
+  - [Uso](#uso)
+- [Metodología](#metodología)
+- [Descripción técnica](#descripción-técnica)
+  - [Requisitos funcionales/no funcionales, NOT LIST](#requisitos-funcionalesno-funcionales-not-list)
+      - [Requisitos funcionales:](#requisitos-funcionales)
+      - [Requisitos no funcionales:](#requisitos-no-funcionales)
+      - [NOT LIST](#not-list)
+  - [Historias de usuaria](#historias-de-usuaria)
+  - [Arquitectura de la aplicación](#arquitectura-de-la-aplicación)
+- [Diseño](#diseño)
+  - [Diagrama de Componentes](#diagrama-de-componentes)
+- [Implementación](#implementación)
+  - [Tecnologías y Herramientas utilizadas](#tecnologías-y-herramientas-utilizadas)
+  - [Backend](#backend)
+  - [Frontend](#frontend)
+- [Pruebas](#pruebas)
+  - [Coverage](#coverage)
+  - [Test de unidad](#test-de-unidad)
+  - [Test de integración](#test-de-integración)
+- [Análisis del tiempo invertido](#análisis-del-tiempo-invertido)
+  - [Clockify + Wakatime](#clockify--wakatime)
+  - [Justificación temporal](#justificación-temporal)
+- [Conclusiones](#conclusiones)
+  - [Posibles mejoras](#posibles-mejoras)
+  - [Dificultades](#dificultades)
 
 # Introducción
-
+  Who is Who es un proyecto hecho por [Pablo Pontanilla Moreira](https://github.com/Pontax02) y [Hugo González Besada](https://github.com/Mahu2121) para demostrar los conocimientos obtenidos en los primeros meses del ciclo de DAM(curso 2024-2025) en el IES de TEIS, el proyecto esta escrito en python usando el framework reflex para la interfaz web
 
 # Manual
+
 
 ## Pre-requisitos
 * Python 3.12
 * El framework Reflex
-* Las librerias random, pytest , unittest 
+* Las librerias random, pytest , unittest
 
 
-## Instalación     
+## Instalación
 
 1. <strong> Clona el repositorio de GitHub</strong>: git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
@@ -64,7 +71,7 @@
 
 # Metodología
 
-Creado intentando seguir el modelo de vista controlador
+La metodologia usada fue dividir el proyecto en historias de usuario y realizando tdd en python puro mientras que ibamos documentandonos sobre las posibilidades que ofrecia reflex
 
 # Descripción técnica
 
@@ -91,9 +98,26 @@ La aplicación se basa en una arquitectura <u>modular</u>:
 
 * Código modular para facilitar mantenibilidad.
 
+#### NOT LIST
+
+* IN SCOPE ->  Levantar tablero, hacer preguntas y adivinar personaje
+
+* OUT OF SCOPE -> Tabla de Clasificaciones, quitar las cartas manualmente
+
+* UNRESOLVED -> temática de decoracion
+
 ## Historias de usuaria
 
+|**¿Quién?** | **¿Qué quiere hacer?** | **¿Para qué lo quiere hacer?** |
+|:-:|:-:|:-:|
+|  La Jugadora  |  Elegir una carta aleatoria  |  Para comenzar a jugar |
+|  La Jugadora  |  Realizar preguntas  |  Para descartar personajes que no son el que eligió  |
+|  La Jugadora  |  Adivinar  |  Para terminar la partida y ganar/perder  |
+
+
 ## Arquitectura de la aplicación
+
+ Esta compuesta por tres entornos , Frontend , Backend
 
 # Diseño
 
