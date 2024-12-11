@@ -1,6 +1,6 @@
 import reflex as rx
 
-from who__is_who.diccionario_caracteristicas import diccionario
+from who__is_who.diccionario_caracteristicas2 import diccionario
 import random
 from who__is_who.randomizer import randomizer
 
@@ -13,7 +13,7 @@ class state(rx.State):
     name_diccionarioo= diccionario()
     form_data: dict = {}
     datos: dict = diccionario()
-    personas_eliminadas:list = []
+
     personaje: str = ""
     final: str = ""
     adivinaste: str = ""
@@ -42,8 +42,8 @@ class state(rx.State):
         self.depurar_personajes(form_data.get("question"))
 
     @rx.var
-    def keys(self) -> list:
-        return list(self.datos.keys())
+    def keys(self):       #*lista de keys del diccionario*
+        return list(self.datos.keys())   #conversión de las claves de un diccionario a una lista
 
     
     @rx.event
@@ -55,28 +55,21 @@ class state(rx.State):
     def depurar_personajes(self,caracteristica: str):
 
         diccionario_nuevo = {}
-        caracteristicas_personaje = self.datos.get(self.final)
+        caracteristicas_personaje = self.datos.get(self.final)     #dentro del diccionario coje el personaje seleccionado por el random
 
         print(caracteristicas_personaje)
-        if caracteristica not in caracteristicas_personaje:
+        if caracteristica not in caracteristicas_personaje:         #se asegura que la caractristica(imput) está dentro de del los valores del personaje seleccionado por el random
 
-            self.personas_eliminadas = []
-            for personas in self.datos:
-                if caracteristica in self.datos[personas]:
-                    self.personas_eliminadas.append(personas)
+            print("El personaje no tiene esta caracteristica")      #si no está -> printea eso
 
-            for personas in self.personas_eliminadas:
-                del self.datos[personas]
-
-                
             return
 
-        for personaje, caracteristicas in self.datos.items():
+        for personaje, caracteristicas in self.datos.items():       #bucle for por cada "key de personaje (nombre de personaje) y sus valores" en los items(key:value) del diccionario
 
-            if  caracteristica in caracteristicas:
+            if  caracteristica in caracteristicas:                  #si la caracteristica(imput) está en los valores del personaje, añade al diccionario el personaje con sus valores
                 diccionario_nuevo.update({personaje:caracteristicas})
 
-        self.datos = diccionario_nuevo
+        self.datos = diccionario_nuevo                              #iguala el diccionario inicializado por la clase de estado al diccionario nuevo para solo almacenar los que cumplen el if (los que tienen su caracteristica dentro de los valores del personaje seleccionado por random)
 
     
-        print(self.datos)
+        print(self.datos)                                       
