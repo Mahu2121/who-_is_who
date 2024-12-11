@@ -48,7 +48,7 @@ class state(rx.State):
     
     @rx.event
     def update_text(self, form_data: dict):
-        print(form_data)
+        
         self.form_data = form_data
 
     @rx.event
@@ -57,7 +57,7 @@ class state(rx.State):
         diccionario_nuevo = {}
         caracteristicas_personaje = self.datos.get(self.final)
 
-        print(caracteristicas_personaje)
+        
         if caracteristica not in caracteristicas_personaje:
 
             self.personas_eliminadas = []
@@ -79,4 +79,7 @@ class state(rx.State):
         self.datos = diccionario_nuevo
 
     
-        print(self.datos)
+        
+
+
+
