@@ -1,8 +1,8 @@
 import reflex as rx
 
-from who__is_who.diccionario_caracteristicas import diccionario
+from who__is_who.diccionario_caracteristicas2 import diccionario
 import random
-from who__is_who.randomizer import randomizer
+
 
 
 
