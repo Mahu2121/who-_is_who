@@ -7,7 +7,7 @@ def diccionario():
             "David":["hombre","rubio","corto","barba"], 
             "Anne":["mujer","castaño","corto","pendientes"],
             "Robert":["hombre","castaño","corto"], 
-            "Anita":["mujer","rubia","largo"], 
+            "Anita":["mujer","rubio","largo"], 
             "Joe":["hombre","rubio","corto","gafas"], 
             "George":["hombre","blanco","corto","sombrero"],
             "Bill": ["hombre","pelirrojo","semicalvo","perilla"], 
