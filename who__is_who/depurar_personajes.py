@@ -1,4 +1,6 @@
-from diccionario_caracteristicas2 import diccionario
+from .diccionario_caracteristicas2 import diccionario
+
+import pytest
 
 def depurar_personajes(caracteristica : str):
 
@@ -30,7 +32,7 @@ def depurar_personajes(caracteristica : str):
                 diccionario_nuevo.update({personaje:caracteristicas})
 
         datos = diccionario_nuevo
-        return datos 
+        return diccionario_nuevo 
         
 
 if __name__ == "__main__":
