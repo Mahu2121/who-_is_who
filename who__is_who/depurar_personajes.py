@@ -1,16 +1,12 @@
 from .diccionario_caracteristicas2 import diccionario
 
-import pytest
 
-def depurar_personajes(caracteristica : str):
+def depurar_personajess(caracteristica : str, datos : dict):
 
-        
-        datos = diccionario()
 
         diccionario_nuevo = {}
 
         caracteristicas_personaje = datos.get("David")
-
 
         print("caracteristicas personaje final:", caracteristicas_personaje)
 
@@ -24,15 +20,15 @@ def depurar_personajes(caracteristica : str):
             for personas in personas_eliminadas:
                 del datos[personas]
 
-
+            return datos
 
         for personaje, caracteristicas in datos.items():
 
-            if  caracteristica in caracteristicas:
+            if caracteristica in caracteristicas:
                 diccionario_nuevo.update({personaje:caracteristicas})
 
         datos = diccionario_nuevo
-        return diccionario_nuevo 
+        return datos
         
 
 if __name__ == "__main__":
