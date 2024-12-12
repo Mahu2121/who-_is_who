@@ -146,8 +146,6 @@ La aplicación se basa en una arquitectura <u>modular</u>:
 
 - **`randomizer`** es donde se encuentra la funcion que escoge un personaje aleatorio
 
-- **`.test`** es dopnde estan los test de unidad de las tres historias de usuario
-
 - **`.depurar_personajes`** es donde esta la funcion que se encarga de filtrar personajes
 
 # Implementación
