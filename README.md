@@ -132,13 +132,13 @@ La aplicación se basa en una arquitectura <u>modular</u>:
 
 ## Diagrama de Componentes
 
-![diagrama](pictures/foto1.png)
+![diagrama](pictures/diag.png)
 
 ### Componentes
 
 - **`who__is_who`** es donde esta la pagina principal que muestra la vista del proyecto
 
-- **` .style`** es donde se encuentran algunos de los estilos asignado a los componentes de la pagina principal
+- **`.style`** es donde se encuentran algunos de los estilos asignado a los componentes de la pagina principal
 
 - **`.estado`** es el modulo que se encarga de comunicse con el frontend y backend para llamar a las funciones
 
