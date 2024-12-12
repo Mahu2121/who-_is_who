@@ -21,6 +21,7 @@
   - [Arquitectura de la aplicación](#arquitectura-de-la-aplicación)
 - [Diseño](#diseño)
   - [Diagrama de Componentes](#diagrama-de-componentes)
+    - [Componentes](#componentes)
 - [Implementación](#implementación)
   - [Tecnologías y Herramientas utilizadas](#tecnologías-y-herramientas-utilizadas)
   - [Backend](#backend)
@@ -127,33 +128,114 @@ La aplicación se basa en una arquitectura <u>modular</u>:
 
 # Diseño
 
-![diagrama](pictures/foto1.png)
+
 
 ## Diagrama de Componentes
 
+![diagrama](pictures/foto1.png)
+
+### Componentes
+
+- **`who__is_who`** es donde esta la pagina principal que muestra la vista del proyecto
+
+- **` .style`** es donde se encuentran algunos de los estilos asignado a los componentes de la pagina principal
+
+- **`.estado`** es el modulo que se encarga de comunicse con el frontend y backend para llamar a las funciones
+
+- **`.diccionario_caracteristicas2`** es donde se guarda en un diccionario la informacion de todos los personajes
+
+- **`randomizer`** es donde se encuentra la funcion que escoge un personaje aleatorio
+
+- **`.test`** es dopnde estan los test de unidad de las tres historias de usuario
+
+- **`.depurar_personajes`** es donde esta la funcion que se encarga de filtrar personajes
+
 # Implementación
+
 
 ## Tecnologías y Herramientas utilizadas
 
+- El lenguaje empleado es **python3** , apoyandose en el framework **reflex** y se usaron para hacer el proyecto:
+- Vscode
+- git
+- github
+- discord
+
+
 ## Backend
+
+**FastAPI**
+
+**WebSockets**
+
+**SQLite**
 
 ## Frontend
 
+**React**
+
+**Next.js**
+
+**TypeScript**
+
+**CSS (Tailwind)**
+
 # Pruebas
+
+Hemos creado casos test sobre cada historia de usuario
+
+El problema que hemos tenido ha sido con vscode al ejecutarlo
+
+Aun asi los test estan escritos en la carpeta test
 
 ## Coverage
 
+No se pudo realizar por el momento
+
 ## Test de unidad
 
+Los test de unidad escritos fueron los siguientes
+
+![](pictures\foto4.png)
+
+![](pictures\foto3.png)
+
+![](pictures\foto2.png)
 ## Test de integración
+
+No se realizaron
 
 # Análisis del tiempo invertido
 
+Estimamos que entre los dos se llegaron a las 70 horas de trabajo entre codigo y documentacion
+
 ## Clockify + Wakatime
+
+Primera semana
+
+![](pictures\waka1.png)
+
+Segunda semana
+
+![](pictures\waka2.png)
+
+Tercera semana
+
+![](pictures\waka3.png)
 
 ## Justificación temporal
 
+- La primera semana no entramos mucho a escribir código porque desconociamos completamente la estructura de reflex , que hizo  que nos frenase mucho a la hora de avanzar en el proyecto, ya que creamos las historias de usuario y teniamos todas las herramientas, pero , no sabiamos como usaralas
+
+- En las dos semanas siguientes empezamos a coger soltura y conseguimos resolver las historias de usuario con fluidez
+
+- Aunque lo que llevo mas tiempo fue filtrar a los personajes por caracteristicas y sobre todo que el frontend respondiese
+
+
+
 # Conclusiones
+
+Consideramos que este proyecto lo podriamos haber organizado mejor , pero a pesar de que nos habiamos enfrentad a un framework nuevo y a usar herramientas de desarrollo que desconociamos conseguimos solucionarlo a pesar de tener el reloj corriendo a nuestras espaldas
 
 ## Posibles mejoras
 
@@ -161,7 +243,7 @@ Agregar más características a los personajes para aumentar la complejidad.
 
 Implementar un sistema de puntuación.
 
-Optimizar la interfaz 
+Optimizar la interfaz
 
 ## Dificultades
 
