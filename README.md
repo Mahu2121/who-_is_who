@@ -127,6 +127,8 @@ La aplicación se basa en una arquitectura <u>modular</u>:
 
 # Diseño
 
+![diagrama](pictures/foto1.png)
+
 ## Diagrama de Componentes
 
 # Implementación
