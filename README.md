@@ -203,6 +203,9 @@ Los test de unidad escritos fueron los siguientes
 
 ![foto2](pictures/foto2.png)
 
+Ejecutando pytest:
+
+![](pictures/pytest.png)
 ## Test de integración
 
 No se realizaron
