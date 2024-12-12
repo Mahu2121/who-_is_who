@@ -117,7 +117,13 @@ La aplicación se basa en una arquitectura <u>modular</u>:
 
 ## Arquitectura de la aplicación
 
- Esta compuesta por tres entornos , Frontend , Backend
+ Esta compuesta por tres entornos , Frontend , Backend y la App
+
+  1- El frontend es el apartado visual que la usuaria ve en su pantalla (La vista)
+
+  2- El backend es donde el controlador realiza los cambios a traves del modelo y actualiza la vista
+  
+  3- Es la interaccion entre el frontend y backend , donde los cambios detectados en el front pasan al backend
 
 # Diseño
 

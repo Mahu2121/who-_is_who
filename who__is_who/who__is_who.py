@@ -2,7 +2,7 @@ import reflex as rx
 from who__is_who.estado import state
 from .diccionario_caracteristicas2 import diccionario
 from who__is_who import style
-
+import pydeps
 
 
 
