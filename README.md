@@ -190,11 +190,13 @@ Aun asi los test estan escritos en la carpeta test
 
 ## Coverage
 
-No se pudo realizar por el momento
+![](pictures/coverage.png)
+
+*Los modulos que contenían los tests se ejecutan al 100%.*
 
 ## Test de unidad
 
-Los test de unidad escritos fueron los siguientes
+Los test de unidad escritos fueron los siguientes:
 
 
 ![foto4](pictures/foto4.png)
