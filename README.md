@@ -225,6 +225,14 @@ Tercera semana
 
 ![](pictures/waka3.png)
 
+Primera semana
+
+![](pictures/wakata.png)
+
+segunda semana
+
+![](pictures/wakata2.png)
+
 ## Justificación temporal
 
 - La primera semana no entramos mucho a escribir código porque desconociamos completamente la estructura de reflex , que hizo  que nos frenase mucho a la hora de avanzar en el proyecto, ya que creamos las historias de usuario y teniamos todas las herramientas, pero , no sabiamos como usaralas
