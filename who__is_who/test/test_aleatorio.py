@@ -1,7 +1,10 @@
 import reflex as rx
+
+import pytest
+
 import unittest
 from who__is_who.estado import state
-import pytest
+
 
 class TestAdivinar(unittest.TestCase):
 
@@ -9,9 +12,11 @@ class TestAdivinar(unittest.TestCase):
         
         self.state = state()
 
-    def aleatorio(self):
+    def test_aleatorio(self):
         self.state.randomizer()
         self.assertIn(
             self.state.final,
             self.state.name_diccionarioo.keys(),
         )
+
+

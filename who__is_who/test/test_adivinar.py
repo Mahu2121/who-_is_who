@@ -24,11 +24,11 @@ class TestAdivinar(unittest.TestCase):
     def test_perdiste(self):
 
         self.state.final = "Bernard"
-        self.state.texto_input = "pablo"
+        self.state.texto_input = "Robert"
         self.state.adivinar()
         self.assertEqual(
             self.state.adivinaste,
-            "Perdiste. El personaje era Bernard"
+            "Perdiste. El personaje era Bernard."
         )
 
 
