@@ -196,11 +196,12 @@ No se pudo realizar por el momento
 
 Los test de unidad escritos fueron los siguientes
 
-![](pictures\foto4.png)
 
-![](pictures\foto3.png)
+![foto4](pictures/foto4.png)
 
-![](pictures\foto2.png)
+![foto3](pictures/foto3.png)
+
+![foto2](pictures/foto2.png)
 
 ## Test de integración
 
@@ -214,15 +215,15 @@ Estimamos que entre los dos se llegaron a las 70 horas de trabajo entre codigo y
 
 Primera semana
 
-![](pictures\waka1.png)
+![waka1](pictures/waka1.png)
 
 Segunda semana
 
-![](pictures\waka2.png)
+![](pictures/waka2.png)
 
 Tercera semana
 
-![](pictures\waka3.png)
+![](pictures/waka3.png)
 
 ## Justificación temporal
 
