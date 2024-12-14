@@ -36,7 +36,7 @@
 - [Conclusiones](#conclusiones)
   - [Posibles mejoras](#posibles-mejoras)
   - [Dificultades](#dificultades)
-
+  - [Uso de IA](#uso-de-ia)
 # Introducción
   Who is Who es un proyecto hecho por [Pablo Pontanilla Moreira](https://github.com/Pontax02) y [Hugo González Besada](https://github.com/Mahu2121) para demostrar los conocimientos obtenidos en los primeros meses del ciclo de DAM(curso 2024-2025) en el IES de TEIS, el proyecto esta escrito en python usando el framework reflex para la interfaz web
 
@@ -261,3 +261,12 @@ Optimizar la interfaz
 ## Dificultades
 
 Es la primera vez que usamos un framework, en este caso "Reflex" lo que hizo que tuvieramos que aprender desde el principio como funciona y como integrar el backend al la interfaz. Tambien era la primera vez que veiamos las clases de estado que al final resultaron ser vitales para, por ejemplo ir cambiando el imput introducido por el usuario y guardarlo para comparar.
+
+## Uso de IA
+
+| **Pregunta** | **Respuesta** |
+|:-:|:-:|
+| ¿Qué herramienta de IA generativa usaste (nombre y versión)? | **`ChatGPT(GPT-4)`** |
+| ¿Qué tipos de prompts proporcionaste? | Fragmentos de código escrito por nosotros
+| ¿Para qué usaste la herramienta? |  Para comprobar que no cometimos algún fallo de sintaxis o estructura de reflex (Aun asi cahtgpt no dominaba mucho el framework por lo qiue tuvimos que acudir a la documentacion de **`Reflex`**) | |
+| ¿Cómo has utilizado o cambiado la salida de la IA generativa? | En nuestro caso al ser correciones de código sustituiamos lo que nos corregia pero en ningun momento plasmar el codigo corregido que nos enviaba |
