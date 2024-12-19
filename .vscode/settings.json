@@ -6,7 +6,8 @@
         "imagenes",
         "HistoriaUsuario1",
         "merge",
-        "readme"
+        "readme",
+        "requisitos"
     ],
     "python.testing.unittestArgs": [
         "-v",
